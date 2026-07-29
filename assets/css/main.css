@@ -16,9 +16,9 @@
     --border-color: #d9e3f2;
     --shadow: 0 2px 10px rgba(35, 31, 32, 0.1);
     --shadow-hover: 0 6px 20px rgba(31, 95, 201, 0.18);
-    --popular-recipes-color: #10a394;
-    --foodie-showcase-color: #4c6fff;
-    --hot-spot-showcase-color: #231f20;
+    --style-guides-color: #10a394;
+    --designer-spotlight-color: #4c6fff;
+    --shop-spotlight-color: #231f20;
     --logo-height: 42px;
     --border-radius: 8px;
 }
@@ -158,74 +158,104 @@ body {
 .hero {
     position: relative;
     isolation: isolate;
+    overflow: hidden;
     background-color: #0c1320;
-    background-image:
-        linear-gradient(135deg, rgba(35, 31, 32, 0.82), rgba(31, 95, 201, 0.72)),
-        url("/assets/images/hero-food-pattern.jpg");
-    background-repeat: repeat, repeat;
-    background-size: auto, 360px 360px;
-    background-position: center, top left;
+    background-image: url("/assets/images/hero-textiles-pattern.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: var(--white);
     padding: 4rem 0;
     text-align: center;
     box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.12);
 }
 
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-buttons {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cloth-button {
+    --button-size: 46px;
+    position: absolute;
+    width: var(--button-size);
+    aspect-ratio: 1;
+    border: 4px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    background: var(--button-color);
+    box-shadow:
+        0 9px 13px rgba(8, 16, 30, 0.34),
+        inset 0 3px 4px rgba(255, 255, 255, 0.46),
+        inset 0 -4px 5px rgba(6, 12, 24, 0.28);
+    transform: rotate(var(--button-rotation, 0deg));
+}
+
+.cloth-button::before {
+    content: "";
+    position: absolute;
+    inset: 30%;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 25% 25%, rgba(18, 26, 40, 0.82) 0 16%, transparent 18%),
+        radial-gradient(circle at 75% 25%, rgba(18, 26, 40, 0.82) 0 16%, transparent 18%),
+        radial-gradient(circle at 25% 75%, rgba(18, 26, 40, 0.82) 0 16%, transparent 18%),
+        radial-gradient(circle at 75% 75%, rgba(18, 26, 40, 0.82) 0 16%, transparent 18%);
+}
+
+.cloth-button-cream,
+.cloth-button-pearl {
+    border-width: 3px;
+    border-color: rgba(37, 51, 74, 0.3);
+}
+
+.cloth-button-cobalt { --button-color: #3176d6; }
+.cloth-button-cream { --button-color: #eee3ca; }
+.cloth-button-purple { --button-color: #7652b5; }
+.cloth-button-pearl { --button-color: #d9e0e7; }
+.cloth-button-sky { --button-color: #72aee8; }
+
+.cloth-button-1 { --button-size: 52px; --button-rotation: 12deg; left: 7%; top: 17%; }
+.cloth-button-2 { --button-size: 36px; --button-rotation: -18deg; left: 18%; bottom: 12%; }
+.cloth-button-3 { --button-size: 44px; --button-rotation: 28deg; left: 33%; top: 9%; }
+.cloth-button-5 { --button-size: 32px; --button-rotation: 19deg; right: 21%; top: 12%; }
+.cloth-button-6 { --button-size: 43px; --button-rotation: -24deg; right: 8%; bottom: 16%; }
+
 .hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    text-shadow: 0 3px 16px rgba(0, 0, 0, 0.35);
+    text-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.92),
+        0 5px 12px rgba(0, 0, 0, 0.82),
+        0 8px 24px rgba(0, 0, 0, 0.72);
 }
 
-.hero-action {
-    display: inline-block;
-    min-width: 4.25ch;
-    text-align: right;
-    transform-origin: 50% 70%;
-}
-
-.hero-action.is-changing {
-    animation: hero-word-bounce 0.5s ease-in-out both;
-}
-
-@keyframes hero-word-bounce {
-    0% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
+@media (max-width: 640px) {
+    .cloth-button-2,
+    .cloth-button-3 {
+        display: none;
     }
 
-    32% {
-        opacity: 0;
-        transform: translateY(0.28em) scale(0.92);
-    }
-
-    50% {
-        opacity: 0;
-        transform: translateY(-0.28em) scale(1.08);
-    }
-
-    78% {
-        opacity: 1;
-        transform: translateY(0.04em) scale(1.03);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hero-action.is-changing {
-        animation: none;
-    }
+    .cloth-button-1 { left: 3%; }
+    .cloth-button-2 { left: 13%; }
+    .cloth-button-5 { right: 12%; }
+    .cloth-button-6 { right: 3%; }
 }
 
 .hero-description {
     font-size: 1.25rem;
     opacity: 0.95;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.32);
+    text-shadow:
+        0 2px 3px rgba(0, 0, 0, 0.92),
+        0 4px 10px rgba(0, 0, 0, 0.8),
+        0 7px 20px rgba(0, 0, 0, 0.68);
 }
 
 /* Filters */
@@ -349,18 +379,18 @@ body {
     text-transform: uppercase;
 }
 
-.article-type-popular-recipes {
-    background-color: var(--popular-recipes-color);
+.article-type-style-guides {
+    background-color: var(--style-guides-color);
     color: var(--white);
 }
 
-.article-type-foodie-showcase {
-    background-color: var(--foodie-showcase-color);
+.article-type-designer-spotlight {
+    background-color: var(--designer-spotlight-color);
     color: var(--text-color);
 }
 
-.article-type-hot-spot-showcase {
-    background-color: var(--hot-spot-showcase-color);
+.article-type-shop-spotlight {
+    background-color: var(--shop-spotlight-color);
     color: var(--white);
 }
 
@@ -870,11 +900,11 @@ body {
 }
 
 .foodies-page .person-row:nth-of-type(4n+2) .avatar {
-    background: var(--popular-recipes-color);
+    background: var(--style-guides-color);
 }
 
 .foodies-page .person-row:nth-of-type(4n+3) .avatar {
-    background: var(--foodie-showcase-color);
+    background: var(--designer-spotlight-color);
 }
 
 .foodies-page .person-row:nth-of-type(4n+4) .avatar {

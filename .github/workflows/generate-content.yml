@@ -1,4 +1,4 @@
-name: Generate Food Article
+name: Generate Clothing Article
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: generate-food-article-${{ github.ref }}
+  group: generate-clothing-article-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -66,6 +66,6 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add _guides/ generated-topics.json assets/images/guides/
-          git commit -m "Add new food article [automated] - formatting verified"
+          git commit -m "Add new clothing article [automated] - formatting verified"
           git pull --rebase origin main
           git push

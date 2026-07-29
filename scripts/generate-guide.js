@@ -41,14 +41,14 @@ function titleToSlug(title) {
 }
 
 const ARTICLE_TYPES = {
-  'popular-recipes': 'Popular Recipes',
-  'foodie-showcase': 'Foodie Showcase',
-  'hot-spot-showcase': 'Hot Spot Showcase'
+  'style-guides': 'Style Guides',
+  'designer-spotlight': 'Designer Spotlight',
+  'shop-spotlight': 'Shop Spotlight'
 };
 const ARTICLE_TYPE_ORDER = Object.keys(ARTICLE_TYPES);
 
 function getArticleTypeLabel(articleType) {
-  return ARTICLE_TYPES[articleType] || 'Foodie Showcase';
+  return ARTICLE_TYPES[articleType] || 'Designer Spotlight';
 }
 
 function findTopicByGeneratedTitle(topics, generatedTitle) {
@@ -152,41 +152,40 @@ function getTopicSourceGuidance(topic) {
 }
 
 function getFactualSourceGuidance(topic) {
-  if (topic.article_type === 'popular-recipes') {
+  if (topic.article_type === 'style-guides') {
     return `
-POPULAR RECIPES FACTUAL REQUIREMENTS:
-- Write about a REAL recipe, method, or dish pattern supported by the provided recipe sources.
-- Do NOT invent measurements, cook times, temperatures, food safety claims, origin claims, substitutions, or technique claims that are not supported by the sources.
-- Use and cite the provided recipe sources for factual claims, ingredient ideas, technique notes, timing, substitutions, and serving guidance.
-- Compare what the sources agree on and where they differ, then give practical, careful guidance for home cooks.
-- If a recipe detail may vary by oven, pan, ingredient size, brand, or taste, say so plainly.
+STYLE GUIDES FACTUAL REQUIREMENTS:
+- Give practical, source-backed guidance about fit, styling, wardrobe care, textiles, repair, or responsible shopping.
+- Do NOT invent garment-care rules, material properties, sizing claims, sustainability claims, or brand policies.
+- Use and cite the provided sources for factual claims and distinguish documented guidance from editorial suggestions.
+- When fit or styling depends on body, garment construction, personal taste, or brand sizing, say so plainly.
 - Include a "## Sources Cited" section with at least 2 provided topic source links before "## Further Reading".`;
   }
 
-  if (topic.article_type === 'hot-spot-showcase') {
+  if (topic.article_type === 'shop-spotlight') {
 
     return `
-HOT SPOT SHOWCASE FACTUAL REQUIREMENTS:
-- Write about one REAL, NAMED food location that exists in the real world, such as a restaurant, bakery, cafe, food truck, market stall, pop-up, bar, or counter-service spot.
-- Do NOT invent a restaurant, chef, menu item, quote, neighborhood, award, origin story, wait time, opening date, ownership detail, or address.
+SHOP SPOTLIGHT FACTUAL REQUIREMENTS:
+- Write about one REAL, NAMED clothing retailer, boutique, concept store, resale program, repair shop, or retail platform.
+- Do NOT invent a store, founder, designer roster, service, quote, location, award, origin story, opening date, policy, or address.
 - Include the actual location name, city, and neighborhood/area when available.
-- Use and cite actual public sources. Prefer the location's official website/menu/social profile plus credible food media, local press, Michelin/James Beard/Eater/Infatuation/local newspaper coverage, or a reputable listing.
+- Use and cite actual public sources. Prefer the retailer's official website and policy pages plus credible fashion or local reporting.
 - Any factual information from another source must be cited with a markdown link in the same paragraph. If you include a direct quote, keep it short, put it in quotation marks, and cite the linked source immediately.
-- For what to order, only mention dishes that are documented by an official menu/social post or reputable coverage. If details may change, say readers should verify current menu/hours before visiting.
-- Do not imply that decent.clothing personally visited the location unless the source text says so. Use careful phrasing like "public menus list..." or "local coverage highlights..."
+- Only mention designers, products, services, policies, or locations documented by the supplied sources. If details may change, tell readers to verify current inventory, terms, and hours.
+- Do not imply that decent.clothing personally visited or purchased from the shop unless a source supports it.
 - Include a "## Sources Cited" section with 2-4 real links used for the article, before "## Further Reading".`;
   }
 
-  if (topic.article_type === 'foodie-showcase') {
+  if (topic.article_type === 'designer-spotlight') {
     return `
-FOODIE SHOWCASE FACTUAL REQUIREMENTS:
-- Write about one REAL, NAMED food content creator, chef-creator, blogger, newsletter writer, podcaster, restaurant reviewer, photographer, or food media personality.
-- Do NOT invent a person, handle, platform, recipe, quote, collaboration, award, follower count, hometown, biography detail, or content example.
-- Include the creator's real public name or publication name and their main public handle/site when available.
-- Use and cite actual public sources. Prefer the creator's own website, newsletter, social profile, cookbook/podcast page, About page, and credible interviews or media coverage.
+DESIGNER SPOTLIGHT FACTUAL REQUIREMENTS:
+- Write about one REAL, NAMED fashion designer, label, or craft-led studio.
+- Do NOT invent a person, collection, garment, quote, collaboration, award, biography detail, material, technique, or cultural claim.
+- Include the designer's real name and official label or studio name when available.
+- Use and cite actual public sources. Prefer the designer's official site or biography, professional organizations, collection notes, and credible interviews or fashion reporting.
 - Any factual information from another source must be cited with a markdown link in the same paragraph. If you include a direct quote, keep it short, put it in quotation marks, and cite the linked source immediately.
-- Give credit for specific recipes, posts, videos, photos, newsletters, or creator ideas that inform the article. Do not describe content you cannot attribute to a linked source.
-- Do not imply a personal relationship, interview, or direct permission from the creator unless the source text supports it.
+- Attribute specific collections, techniques, materials, awards, and ideas to linked sources.
+- Do not imply a personal relationship, interview, or direct permission from the designer unless the source text supports it.
 - Include a "## Sources Cited" section with 2-4 real links used for the article, before "## Further Reading".`;
   }
 
@@ -194,7 +193,7 @@ FOODIE SHOWCASE FACTUAL REQUIREMENTS:
 FACTUAL ACCURACY REQUIREMENTS:
 - Do not invent sources, claims, quotes, or links.
 - Use the provided topic sources for factual claims.
-- Cite any sourced factual claim with a real markdown link when referring to external reporting, recipes, or food culture references.
+- Cite sourced factual claims with real markdown links to the supplied clothing, designer, and retail references.
 - Include a "## Sources Cited" section with at least 2 provided topic source links before "## Further Reading".`;
 }
 
@@ -377,9 +376,9 @@ function validateArticleSourceRequirements(content, topic) {
 
 function validateArticleTypeFocus(content, topic) {
   const mismatchedHeadings = {
-    'popular-recipes': ['### Foodie Showcase:', '### Hot Spot Showcase:'],
-    'foodie-showcase': ['### Popular Recipes:', '### Hot Spot Showcase:'],
-    'hot-spot-showcase': ['### Popular Recipes:', '### Foodie Showcase:']
+    'style-guides': ['### Designer Spotlight:', '### Shop Spotlight:'],
+    'designer-spotlight': ['### Style Guides:', '### Shop Spotlight:'],
+    'shop-spotlight': ['### Style Guides:', '### Designer Spotlight:']
   };
 
   const disallowed = mismatchedHeadings[topic.article_type] || [];
@@ -438,7 +437,7 @@ This guide is part ${topic.series.part} of ${topic.series.total} in the "${topic
 `;
       }
 
-      const prompt = `Create an editorial food article about "${topic.title}" for a food discovery website called "decent.clothing".\nArticle type: ${getArticleTypeLabel(topic.article_type)}.
+      const prompt = `Create an editorial clothing article about "${topic.title}" for a style and fashion discovery website called "decent.clothing".\nArticle type: ${getArticleTypeLabel(topic.article_type)}.
 ${seriesContext}
 ${getFactualSourceGuidance(topic)}
 ${getTopicSourceGuidance(topic)}
@@ -449,7 +448,7 @@ WRITING STYLE & PERSONALITY:
 - Include personal observations, opinions, or insights where appropriate
 - Share why YOU think this topic is interesting or important
 - Use humor sparingly but effectively
-- Show passion for food culture, social media trends, restaurant discovery, and creator storytelling
+- Show passion for personal style, garment craft, designer storytelling, textiles, and thoughtful retail discovery
 - Write like you're explaining to a curious friend over coffee, not lecturing
 - Match the article type: ${getArticleTypeLabel(topic.article_type)}
 
@@ -475,9 +474,9 @@ CONTENT STRUCTURE:
 4. Main article sections with clear ## headers (3-5 sections)
 5. Practical Details:
    - Include ONLY the practical details for this article type: ${getArticleTypeLabel(topic.article_type)}
-   - If Popular Recipes: include ingredients, steps, substitutions, and serving ideas
-   - If Foodie Showcase: include the real creator's focus, what makes their credited work useful, where their voice fits in food culture, and what sourced public content to follow first
-   - If Hot Spot Showcase: include the real location name, city/area, what documented menu items to order, when to go if sourced, who it is for, and what makes the place distinct
+   - If Style Guides: include clear advice, fit or care considerations, practical steps, and where individual needs may vary
+   - If Designer Spotlight: include the designer's documented background, point of view, craft, notable work, and what to explore first
+   - If Shop Spotlight: include the real retailer or program name, location or service area, documented offering, how it works, who it is for, and what makes it distinct
    - Do NOT include practical-detail subsections for the other article types
 6. Key Takeaways (bullet points) - use ## header
 7. Sources Cited (REQUIRED for all article types; include at least 2 provided topic source links used in the article) - use ## header
@@ -488,7 +487,7 @@ CRITICAL HEADER FORMATTING RULES:
 - Do NOT add an equals-sign underline under the title
 - Use ## for all section headers (Why It Matters, main sections, Practical Details, Key Takeaways, Further Reading)
 - Example of correct title format:
-  **The Neighborhood Noodle Shop Worth Crossing Town For**
+  **The Denim Fit Guide: Straight, Relaxed, Loose, and What Actually Changes**
 
   Your introduction text here...
 - DO NOT use just **bold text** for headers - they must be actual ## headers
@@ -498,8 +497,8 @@ Make these REAL, CLICKABLE links to actual resources. Format as:
 - [Resource Title](https://actual-url.com) - Brief description of what it offers
 
 Example:
-- [Eater](https://www.eater.com/) - Restaurant news, city guides, and food culture reporting
-- [Serious Eats](https://www.seriouseats.com/) - Deep recipe testing and cooking technique explainers
+- [CFDA](https://cfda.com/) - Designer profiles, awards, and American fashion industry reporting
+- [Woolmark](https://www.woolmark.com/) - Wool fiber, garment-care, and textile guidance
 
 Write in Markdown format. Do NOT include the front matter (YAML) - only the content body.
 Be friendly, be human, be helpful!`;
@@ -631,9 +630,9 @@ function createFilename(title) {
 // Generate article description from title and article type
 function generateDescription(title, articleType) {
   const starters = {
-    'popular-recipes': 'A Popular Recipes article on',
-    'foodie-showcase': 'A Foodie Showcase on',
-    'hot-spot-showcase': 'A Hot Spot Showcase on'
+    'style-guides': 'A Style Guides article on',
+    'designer-spotlight': 'A Designer Spotlight on',
+    'shop-spotlight': 'A Shop Spotlight on'
   };
   return `${starters[articleType] || 'A decent.clothing article on'} ${title.toLowerCase()}`;
 }
@@ -646,8 +645,8 @@ function generateImagePrompt(topic) {
     .join(', ');
 
   return {
-    prompt: `Colorful editorial food illustration inspired by ${keywords}: stylized illustrated food still life, vibrant hand-drawn shapes, playful composition, appetizing dishes related to the subject, bold color palette with decent.clothing blue accents, warm expressive lighting, modern magazine illustration, charming texture, no people, no hands, no faces, no text, no letters, no words, no typography`,
-    negative_prompt: `people, person, humans, hands, faces, portraits, photorealistic, realistic photography, camera photo, stock photo, text, letters, words, typography, watermark, logo`
+    prompt: `Editorial fashion textile collage inspired by ${keywords}: overlapping swatches and draped sections of linen, denim, wool, silk, corduroy, cotton, knit, velvet, and canvas mixed with tasteful printed leopard, zebra, tiger-stripe, and snakeskin patterns; varied fabric weights, visible weave, stitching, folds, and tactile contrast; sophisticated fashion-magazine composition with decent.clothing blue accents and warm studio lighting; printed patterns only, no real animals, no people, no hands, no faces, no text, no letters, no words, no typography`,
+    negative_prompt: `real animals, animal bodies, fur pelts, taxidermy, people, person, humans, hands, faces, portraits, text, letters, words, typography, watermark, logo, flat vector icons, stock photo`
   };
 }
 

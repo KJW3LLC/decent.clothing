@@ -7,13 +7,13 @@
         {% endif %}
         <div class="card-content">
             <div class="card-header">
-                {% assign article_type = include.guide.article_type | default: 'foodie-showcase' %}
-                {% if article_type == 'popular-recipes' %}
-                    {% assign article_type_label = 'Popular Recipes' %}
-                {% elsif article_type == 'hot-spot-showcase' %}
-                    {% assign article_type_label = 'Hot Spot Showcase' %}
+                {% assign article_type = include.guide.article_type | default: 'designer-spotlight' %}
+                {% if article_type == 'style-guides' %}
+                    {% assign article_type_label = 'Style Guides' %}
+                {% elsif article_type == 'shop-spotlight' %}
+                    {% assign article_type_label = 'Shop Spotlight' %}
                 {% else %}
-                    {% assign article_type_label = 'Foodie Showcase' %}
+                    {% assign article_type_label = 'Designer Spotlight' %}
                 {% endif %}
                 <span class="article-type article-type-{{ article_type }}">{{ article_type_label }}</span>
                 <span class="estimated-time">{{ include.guide.estimated_time }}</span>

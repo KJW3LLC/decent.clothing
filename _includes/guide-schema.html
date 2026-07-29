@@ -31,13 +31,13 @@
   },
   "url": "{{ site.url }}{{ page.url }}",
   "keywords": {{ page.tags | jsonify }},
-  {% assign article_type = page.article_type | default: 'foodie-showcase' %}
-  {% if article_type == 'popular-recipes' %}
-    {% assign article_type_label = 'Popular Recipes' %}
-  {% elsif article_type == 'hot-spot-showcase' %}
-    {% assign article_type_label = 'Hot Spot Showcase' %}
+  {% assign article_type = page.article_type | default: 'designer-spotlight' %}
+  {% if article_type == 'style-guides' %}
+    {% assign article_type_label = 'Style Guides' %}
+  {% elsif article_type == 'shop-spotlight' %}
+    {% assign article_type_label = 'Shop Spotlight' %}
   {% else %}
-    {% assign article_type_label = 'Foodie Showcase' %}
+    {% assign article_type_label = 'Designer Spotlight' %}
   {% endif %}
   "articleSection": "{{ article_type_label }}",
   "timeRequired": "{{ page.estimated_time }}",

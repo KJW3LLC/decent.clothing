@@ -1,30 +1,30 @@
 {
   "schema_version": "1.0",
   "name": "decent.clothing",
-  "description": "Editorial food site covering DIY cooking, food creators, and restaurant hot spots.",
+  "description": "Editorial clothing site covering style guidance, designers, and standout shops.",
   "version": "1.0",
   "url": "https://decent.clothing",
   "content_types": [
     "editorial_articles",
-    "diy_cooking",
-    "creator_profiles",
-    "restaurant_showcases",
-    "food_media"
+    "style_guides",
+    "designer_profiles",
+    "shop_showcases",
+    "clothing_care"
   ],
   "topics": [
-    "diy_cooking",
-    "recipes",
-    "home_cooking",
-    "food_creators",
-    "food_influencers",
-    "restaurant_discovery",
-    "regional_food",
-    "hot_spots"
+    "personal_style",
+    "wardrobe_care",
+    "textiles",
+    "fashion_designers",
+    "independent_labels",
+    "shop_discovery",
+    "resale",
+    "circular_fashion"
   ],
   "article_types": [
-    "diy-cooking",
-    "foodie-showcase",
-    "hot-spot-showcase"
+    "style-guides",
+    "designer-spotlight",
+    "shop-spotlight"
   ],
   "resources": {
     "articles": {
@@ -81,9 +81,9 @@
     "series_support": true,
     "article_type_taxonomy": true,
     "estimated_reading_time": true,
-    "food_creator_profiles": true,
-    "restaurant_showcases": true,
-    "practical_cooking_articles": true
+    "designer_profiles": true,
+    "shop_showcases": true,
+    "practical_style_articles": true
   },
   "license": {
     "type": "CC BY 4.0",

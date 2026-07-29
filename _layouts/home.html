@@ -3,8 +3,15 @@ layout: default
 ---
 
 <div class="hero">
+    <div class="hero-buttons" aria-hidden="true">
+        <span class="cloth-button cloth-button-cobalt cloth-button-1"></span>
+        <span class="cloth-button cloth-button-cream cloth-button-2"></span>
+        <span class="cloth-button cloth-button-purple cloth-button-3"></span>
+        <span class="cloth-button cloth-button-pearl cloth-button-5"></span>
+        <span class="cloth-button cloth-button-sky cloth-button-6"></span>
+    </div>
     <div class="container">
-        <h1 class="hero-title"><span class="hero-action" aria-live="polite">Eat</span> Decent Food</h1>
+        <h1 class="hero-title">Decent Style for All</h1>
         <p class="hero-description">{{ site.description }}</p>
     </div>
 </div>
@@ -15,9 +22,9 @@ layout: default
     </div>
     <div class="filter-buttons" aria-label="Article type filters">
         <button class="filter-btn active" data-article-type="all">All Articles</button>
-        <button class="filter-btn" data-article-type="popular-recipes">Popular Recipes</button>
-        <button class="filter-btn" data-article-type="foodie-showcase">Foodie Showcase</button>
-        <button class="filter-btn" data-article-type="hot-spot-showcase">Hot Spot Showcase</button>
+        <button class="filter-btn" data-article-type="style-guides">Style Guides</button>
+        <button class="filter-btn" data-article-type="designer-spotlight">Designer Spotlight</button>
+        <button class="filter-btn" data-article-type="shop-spotlight">Shop Spotlight</button>
     </div>
 </div>
 
@@ -27,6 +34,14 @@ layout: default
         {% include guide-card.html guide=guide %}
     {% endfor %}
 </div>
+
+{% if site.guides.size == 0 %}
+<div class="no-results">
+    <div class="container">
+        <p>New clothing articles are in the works. Check back soon.</p>
+    </div>
+</div>
+{% endif %}
 
 <div class="no-results" id="no-results" style="display: none;">
     <div class="container">

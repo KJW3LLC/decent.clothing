@@ -39,8 +39,8 @@ function generateImagePrompt(title, tags) {
     .join(", ");
 
   return {
-    prompt: `Colorful editorial food illustration inspired by ${keywords}: stylized illustrated food still life, vibrant hand-drawn shapes, playful composition, appetizing dishes related to the subject, bold color palette with decent.clothing blue accents, warm expressive lighting, modern magazine illustration, charming texture, no people, no hands, no faces, no text, no letters, no words, no typography`,
-    negative_prompt: `people, person, humans, hands, faces, portraits, photorealistic, realistic photography, camera photo, stock photo, text, letters, words, typography, watermark, logo`,
+    prompt: `Editorial fashion textile collage inspired by ${keywords}: overlapping swatches and draped sections of linen, denim, wool, silk, corduroy, cotton, knit, velvet, and canvas mixed with tasteful printed leopard, zebra, tiger-stripe, and snakeskin patterns; varied fabric weights, visible weave, stitching, folds, and tactile contrast; sophisticated fashion-magazine composition with decent.clothing blue accents and warm studio lighting; printed patterns only, no real animals, no people, no hands, no faces, no text, no letters, no words, no typography`,
+    negative_prompt: `real animals, animal bodies, fur pelts, taxidermy, people, person, humans, hands, faces, portraits, text, letters, words, typography, watermark, logo, flat vector icons, stock photo`,
   };
 }
 

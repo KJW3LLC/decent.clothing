@@ -26,7 +26,7 @@ function getTopicSources(topic) {
 
 function validateContentSchema() {
   const root = path.join(__dirname, '..');
-  const validArticleTypes = new Set(['popular-recipes', 'foodie-showcase', 'hot-spot-showcase']);
+  const validArticleTypes = new Set(['style-guides', 'designer-spotlight', 'shop-spotlight']);
   const topicsPath = path.join(root, 'topics.json');
   const generatedTopicsPath = path.join(root, 'generated-topics.json');
   const guidesDir = path.join(root, '_guides');

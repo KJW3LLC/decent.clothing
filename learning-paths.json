@@ -10,25 +10,25 @@ permalink: /learning-paths.json
   },
   "collections": [
     {
-      "id": "popular-recipes",
-      "name": "Popular Recipes",
-      "slug": "popular-recipes",
-      "description": "Practical cooking stories, recipes, and kitchen ideas readers can try at home.",
-      "article_type": "popular-recipes"
+      "id": "style-guides",
+      "name": "Style Guides",
+      "slug": "style-guides",
+      "description": "Practical guidance on fit, styling, wardrobe building, garment care, and textiles.",
+      "article_type": "style-guides"
     },
     {
-      "id": "foodie-showcase",
-      "name": "Foodie Showcase",
-      "slug": "foodie-showcase",
-      "description": "Profiles of food creators, reviewers, cooks, writers, and tastemakers worth following.",
-      "article_type": "foodie-showcase"
+      "id": "designer-spotlight",
+      "name": "Designer Spotlight",
+      "slug": "designer-spotlight",
+      "description": "Profiles of designers, labels, craftspeople, and creative practices worth following.",
+      "article_type": "designer-spotlight"
     },
     {
-      "id": "hot-spot-showcase",
-      "name": "Hot Spot Showcase",
-      "slug": "hot-spot-showcase",
-      "description": "Restaurant, bakery, bar, market, pop-up, and regional food spot coverage.",
-      "article_type": "hot-spot-showcase"
+      "id": "shop-spotlight",
+      "name": "Shop Spotlight",
+      "slug": "shop-spotlight",
+      "description": "Independent boutiques, concept stores, resale programs, and fashion retail coverage.",
+      "article_type": "shop-spotlight"
     }
   ]
 }

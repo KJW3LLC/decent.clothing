@@ -2,7 +2,7 @@
 layout: guide
 title: "Your Article Title"
 date: 2026-02-12
-article_type: foodie-showcase  # popular-recipes | foodie-showcase | hot-spot-showcase
+article_type: designer-spotlight  # style-guides | designer-spotlight | shop-spotlight
 tags: ["tag1", "tag2", "tag3"]
 description: "A concise description of what this article covers"
 estimated_time: "6 min read"
@@ -15,12 +15,12 @@ prerequisites:
   - "related-article-slug"
 
 learning_objectives:
-  - "Understand what makes this food story useful, timely, or delicious"
+  - "Understand what makes this clothing story useful, timely, or distinctive"
   - "Find practical ideas to try, visit, or follow next"
 
 faqs:
   - question: "What kind of article is this?"
-    answer: "This article belongs to one of decent.clothing's editorial categories: Popular Recipes, Foodie Showcase, or Hot Spot Showcase."
+    answer: "This article belongs to one of decent.clothing's editorial categories: Style Guides, Designer Spotlight, or Shop Spotlight."
 
 series:
   name: "Series Name"

@@ -1,7 +1,7 @@
 {
   "name": "decent-clothing",
   "version": "1.0.0",
-  "description": "Food articles automatically generated and published on GitHub Pages",
+  "description": "Clothing articles automatically generated and published on GitHub Pages",
   "main": "scripts/generate-guide.js",
   "scripts": {
     "generate": "node scripts/generate-guide.js",
@@ -22,7 +22,7 @@
     "build:local": "bundle exec jekyll build --config _config.yml,_config_local.yml"
   },
   "keywords": [
-    "food",
+    "clothing",
     "articles",
     "jekyll",
     "github-pages"

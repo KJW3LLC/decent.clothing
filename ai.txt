@@ -1,13 +1,13 @@
 # decent.clothing - AI Agent Instructions
-# This site publishes practical food stories, creator profiles, and restaurant discovery articles.
+# This site publishes practical style guides, designer profiles, and shop discovery articles.
 
 # Site Purpose
-Purpose: Help readers cook better at home, discover food creators worth following, and find restaurants or food hot spots with context.
+Purpose: Help readers dress with intention, discover designers worth following, and find clothing shops and circular-fashion programs with context.
 
 # Content Structure
-Content-Type: Editorial food articles
-Topics: DIY cooking, recipes, home cooking, food creators, food influencers, restaurant discovery, regional food, hot spots
-Article-Types: Popular Recipes, Foodie Showcase, Hot Spot Showcase
+Content-Type: Editorial clothing articles
+Topics: Personal style, wardrobe care, textiles, fashion designers, independent labels, shop discovery, resale, circular fashion
+Article-Types: Style Guides, Designer Spotlight, Shop Spotlight
 Format: Markdown-based articles with examples, practical tips, tags, and estimated reading time
 
 # Machine-Readable Endpoints
@@ -21,7 +21,7 @@ Sitemap: /sitemap.xml
 # Content Organization
 - Articles can be standalone or part of a series
 - Each article includes: article type, estimated reading time, tags, and optional series metadata
-- Article types are popular-recipes, foodie-showcase, and hot-spot-showcase
+- Article types are style-guides, designer-spotlight, and shop-spotlight
 
 # Recommended Usage
 Citation-Format: "[Article Title], decent.clothing (https://decent.clothing/guides/[article-slug]/)"

@@ -19,13 +19,13 @@ permalink: /index.json
     "total_series": {{ series_list.size }},
     {%- assign all_tags = site.guides | map: "tags" | join: "," | split: "," | uniq -%}
     "total_topics": {{ all_tags.size }},
-    {%- assign popular_recipes = site.guides | where: "article_type", "popular-recipes" -%}
-    {%- assign foodie_showcase = site.guides | where: "article_type", "foodie-showcase" -%}
-    {%- assign hot_spot_showcase = site.guides | where: "article_type", "hot-spot-showcase" -%}
+    {%- assign style_guides = site.guides | where: "article_type", "style-guides" -%}
+    {%- assign designer_spotlight = site.guides | where: "article_type", "designer-spotlight" -%}
+    {%- assign shop_spotlight = site.guides | where: "article_type", "shop-spotlight" -%}
     "by_article_type": {
-      "popular-recipes": {{ popular_recipes.size }},
-      "foodie-showcase": {{ foodie_showcase.size }},
-      "hot-spot-showcase": {{ hot_spot_showcase.size }}
+      "style-guides": {{ style_guides.size }},
+      "designer-spotlight": {{ designer_spotlight.size }},
+      "shop-spotlight": {{ shop_spotlight.size }}
     }
   },
   "endpoints": {

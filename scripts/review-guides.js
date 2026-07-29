@@ -11,7 +11,7 @@ const GUIDES_DIR = path.join(__dirname, '..', '_guides');
 const REVIEW_REPORT_FILE = path.join(__dirname, '..', 'article-review-report.json');
 
 // Review criteria
-const REVIEW_PROMPT = `You are a content quality reviewer for an editorial food website called "decent.clothing". Review this article and provide a detailed assessment.
+const REVIEW_PROMPT = `You are a content quality reviewer for an editorial clothing website called "decent.clothing". Review this article and provide a detailed assessment.
 
 REVIEW CRITERIA:
 
@@ -27,7 +27,7 @@ REVIEW CRITERIA:
    - Are there visual breaks (emojis, blockquotes, varied formatting)?
 
 3. ACCURACY (Score 1-10)
-   - Are food, restaurant, creator, and cultural claims explained clearly and responsibly?
+   - Are clothing, designer, retail, textile, and cultural claims explained clearly and responsibly?
    - Are there any factual errors or outdated information?
    - Are links and references valid and relevant?
    - Is the article type appropriate for the content?

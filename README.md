@@ -1,12 +1,12 @@
 # decent.clothing
 
-decent.clothing is a Jekyll-powered food publication with automatically generated editorial articles.
+decent.clothing is a Jekyll-powered clothing publication with automatically generated editorial articles.
 
 ## Article Types
 
-- **Popular Recipes**: practical cooking ideas, recipes, techniques, pantry projects, and home-kitchen experiments.
-- **Foodie Showcase**: food creator profiles, reviewer spotlights, food media analysis, and tastemaker coverage.
-- **Hot Spot Showcase**: restaurant, bakery, bar, market, food truck, pop-up, and regional dining features.
+- **Style Guides**: practical advice on fit, wardrobe building, garment care, styling, and responsible shopping.
+- **Designer Spotlight**: profiles of designers, labels, craftspeople, and distinct creative practices.
+- **Shop Spotlight**: independent boutiques, concept stores, resale programs, and noteworthy fashion retailers.
 
 ## Features
 
@@ -21,17 +21,17 @@ Future topics in `topics.json` use this shape:
 
 ```json
 {
-  "title": "The Neighborhood Noodle Shop Worth Crossing Town For",
-  "article_type": "hot-spot-showcase",
-  "tags": ["hot-spot-showcase", "noodles", "neighborhood-restaurants"]
+  "title": "The Denim Fit Guide: Straight, Relaxed, Loose, and What Actually Changes",
+  "article_type": "style-guides",
+  "tags": ["style-guides", "denim", "fit"]
 }
 ```
 
 Valid `article_type` values:
 
-- `popular-recipes`
-- `foodie-showcase`
-- `hot-spot-showcase`
+- `style-guides`
+- `designer-spotlight`
+- `shop-spotlight`
 
 ## Common Commands
 

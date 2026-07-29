@@ -8,33 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentArticleType = 'all';
     let currentSearchTerm = '';
 
-    const heroAction = document.querySelector('.hero-action');
-    const heroWords = ['Eat', 'Find', 'Make'];
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let heroWordIndex = 0;
-
-    if (heroAction && !prefersReducedMotion) {
-        const displayDuration = 3000;
-        const transitionDuration = 500;
-
-        const rotateHeroWord = () => {
-            heroAction.classList.add('is-changing');
-
-            window.setTimeout(() => {
-                heroWordIndex = (heroWordIndex + 1) % heroWords.length;
-                heroAction.textContent = heroWords[heroWordIndex];
-            }, transitionDuration / 2);
-
-            window.setTimeout(() => {
-                heroAction.classList.remove('is-changing');
-                window.setTimeout(rotateHeroWord, displayDuration);
-            }, transitionDuration);
-        };
-
-        window.setTimeout(rotateHeroWord, displayDuration);
-    }
-
-
     // Filter by article type
     if (filterButtons) {
         filterButtons.forEach(button => {

@@ -33,8 +33,8 @@ function generateImagePrompt(title, tags) {
 
   return {
     // Generic prompt without topic keywords to avoid content filtering
-    prompt: `Abstract technology background: vibrant gradient colors blending blue purple and teal, geometric patterns, flowing curved lines, glowing points, futuristic digital design, clean modern minimalist style, pure visual composition, high quality digital art, smooth gradients and geometric shapes`,
-    negative_prompt: `text, letters, words, typography, watermark, logo`
+    prompt: `Editorial fashion textile collage: overlapping swatches and draped sections of linen, denim, wool, silk, corduroy, cotton, knit, velvet, and canvas mixed with tasteful printed leopard, zebra, tiger-stripe, and snakeskin patterns; varied fabric weights, visible weave, stitching, folds, and tactile contrast; sophisticated fashion-magazine composition with blue accents and warm studio lighting; printed patterns only, no real animals, no people, no hands, no faces, no text, no letters, no words, no typography`,
+    negative_prompt: `real animals, animal bodies, fur pelts, taxidermy, people, person, humans, hands, faces, portraits, text, letters, words, typography, watermark, logo, flat vector icons, stock photo`
   };
 }
 

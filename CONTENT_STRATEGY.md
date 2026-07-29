@@ -2,37 +2,37 @@
 
 decent.clothing uses article types as its editorial taxonomy. Every future article should belong to one of three categories:
 
-- **Popular Recipes**: practical home cooking ideas, recipes, techniques, pantry moves, hosting, and kitchen experiments.
-- **Foodie Showcase**: profiles and analysis of food creators, restaurant reviewers, recipe developers, food writers, and tastemakers.
-- **Hot Spot Showcase**: restaurant, bakery, market, food truck, pop-up, cafe, bar, and regional dining coverage.
+- **Style Guides**: practical wardrobe, fit, garment-care, styling, textile, and responsible-shopping guidance.
+- **Designer Spotlight**: profiles and analysis of designers, labels, craftspeople, and their creative practices.
+- **Shop Spotlight**: independent boutiques, concept stores, resale programs, repair shops, and noteworthy fashion retailers.
 
 ## Publishing Mix
 
 Target a balanced rotation:
 
-- Popular Recipes: 35%
-- Foodie Showcase: 30%
-- Hot Spot Showcase: 35%
+- Style Guides: 35%
+- Designer Spotlight: 30%
+- Shop Spotlight: 35%
 
-This keeps the site useful for readers who want to cook, follow better food voices, and discover places worth visiting.
+This keeps the site useful for readers who want to dress with intention, understand the people making clothes, and discover worthwhile places to shop.
 
 ## Topic Schema
 
 ```json
 {
   "title": "Article title",
-  "article_type": "popular-recipes|foodie-showcase|hot-spot-showcase",
+  "article_type": "style-guides|designer-spotlight|shop-spotlight",
   "tags": ["tag-one", "tag-two", "tag-three"]
 }
 ```
 
 ## Article Guidance
 
-Popular Recipes articles should give readers something specific to make, improve, or try in their own kitchen.
+Style Guides articles should give readers practical, source-backed help with fit, styling, wardrobe care, textiles, or shopping.
 
-Foodie Showcase articles should explain why a creator, critic, cook, newsletter, podcast, or social feed is useful, distinctive, and worth attention.
+Designer Spotlight articles should explain a designer's point of view, craft, cultural context, and documented body of work.
 
-Hot Spot Showcase articles should make a place feel legible: what it serves, why people care, what to order, when to go, and what makes it different from the usual lists.
+Shop Spotlight articles should make a retailer or program legible: what it carries, why people care, how it operates, and what makes it distinct.
 
 ## Generation Notes
 
