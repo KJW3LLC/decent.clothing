@@ -28,7 +28,7 @@ function isValidArticleType(articleType) {
 
 // Main function
 async function addTopic() {
-  console.log('\n📝 Add New Article Topic to decent.food\n');
+  console.log('\n📝 Add New Article Topic to decent.clothing\n');
   console.log('This will add a new topic to topics.json\n');
 
   try {

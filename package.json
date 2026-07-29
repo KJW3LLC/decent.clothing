@@ -1,5 +1,5 @@
 {
-  "name": "decent-food",
+  "name": "decent-clothing",
   "version": "1.0.0",
   "description": "Food articles automatically generated and published on GitHub Pages",
   "main": "scripts/generate-guide.js",

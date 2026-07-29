@@ -173,7 +173,7 @@ HOT SPOT SHOWCASE FACTUAL REQUIREMENTS:
 - Use and cite actual public sources. Prefer the location's official website/menu/social profile plus credible food media, local press, Michelin/James Beard/Eater/Infatuation/local newspaper coverage, or a reputable listing.
 - Any factual information from another source must be cited with a markdown link in the same paragraph. If you include a direct quote, keep it short, put it in quotation marks, and cite the linked source immediately.
 - For what to order, only mention dishes that are documented by an official menu/social post or reputable coverage. If details may change, say readers should verify current menu/hours before visiting.
-- Do not imply that decent.food personally visited the location unless the source text says so. Use careful phrasing like "public menus list..." or "local coverage highlights..."
+- Do not imply that decent.clothing personally visited the location unless the source text says so. Use careful phrasing like "public menus list..." or "local coverage highlights..."
 - Include a "## Sources Cited" section with 2-4 real links used for the article, before "## Further Reading".`;
   }
 
@@ -438,7 +438,7 @@ This guide is part ${topic.series.part} of ${topic.series.total} in the "${topic
 `;
       }
 
-      const prompt = `Create an editorial food article about "${topic.title}" for a food discovery website called "decent.food".\nArticle type: ${getArticleTypeLabel(topic.article_type)}.
+      const prompt = `Create an editorial food article about "${topic.title}" for a food discovery website called "decent.clothing".\nArticle type: ${getArticleTypeLabel(topic.article_type)}.
 ${seriesContext}
 ${getFactualSourceGuidance(topic)}
 ${getTopicSourceGuidance(topic)}
@@ -635,7 +635,7 @@ function generateDescription(title, articleType) {
     'foodie-showcase': 'A Foodie Showcase on',
     'hot-spot-showcase': 'A Hot Spot Showcase on'
   };
-  return `${starters[articleType] || 'A decent.food article on'} ${title.toLowerCase()}`;
+  return `${starters[articleType] || 'A decent.clothing article on'} ${title.toLowerCase()}`;
 }
 
 // Generate AI image prompt from topic
@@ -646,7 +646,7 @@ function generateImagePrompt(topic) {
     .join(', ');
 
   return {
-    prompt: `Colorful editorial food illustration inspired by ${keywords}: stylized illustrated food still life, vibrant hand-drawn shapes, playful composition, appetizing dishes related to the subject, bold color palette with decent.food blue accents, warm expressive lighting, modern magazine illustration, charming texture, no people, no hands, no faces, no text, no letters, no words, no typography`,
+    prompt: `Colorful editorial food illustration inspired by ${keywords}: stylized illustrated food still life, vibrant hand-drawn shapes, playful composition, appetizing dishes related to the subject, bold color palette with decent.clothing blue accents, warm expressive lighting, modern magazine illustration, charming texture, no people, no hands, no faces, no text, no letters, no words, no typography`,
     negative_prompt: `people, person, humans, hands, faces, portraits, photorealistic, realistic photography, camera photo, stock photo, text, letters, words, typography, watermark, logo`
   };
 }

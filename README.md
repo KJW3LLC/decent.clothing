@@ -1,6 +1,6 @@
-# decent.food
+# decent.clothing
 
-decent.food is a Jekyll-powered food publication with automatically generated editorial articles.
+decent.clothing is a Jekyll-powered food publication with automatically generated editorial articles.
 
 ## Article Types
 

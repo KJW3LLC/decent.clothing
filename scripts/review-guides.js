@@ -11,7 +11,7 @@ const GUIDES_DIR = path.join(__dirname, '..', '_guides');
 const REVIEW_REPORT_FILE = path.join(__dirname, '..', 'article-review-report.json');
 
 // Review criteria
-const REVIEW_PROMPT = `You are a content quality reviewer for an editorial food website called "decent.food". Review this article and provide a detailed assessment.
+const REVIEW_PROMPT = `You are a content quality reviewer for an editorial food website called "decent.clothing". Review this article and provide a detailed assessment.
 
 REVIEW CRITERIA:
 
@@ -237,7 +237,7 @@ function generateSummary(results) {
 async function fixArticle(articleData, review, filename, filePath) {
   console.log(`  🔧 Fixing issues...`);
 
-  const fixPrompt = `You are a content editor for "decent.food". You previously reviewed this article and found issues. Now fix them.
+  const fixPrompt = `You are a content editor for "decent.clothing". You previously reviewed this article and found issues. Now fix them.
 
 ORIGINAL ARTICLE:
 Title: ${articleData.frontMatter.title || 'Unknown'}

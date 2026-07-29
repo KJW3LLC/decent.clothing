@@ -1,6 +1,6 @@
-# decent.food Content Strategy
+# decent.clothing Content Strategy
 
-decent.food uses article types as its editorial taxonomy. Every future article should belong to one of three categories:
+decent.clothing uses article types as its editorial taxonomy. Every future article should belong to one of three categories:
 
 - **Popular Recipes**: practical home cooking ideas, recipes, techniques, pantry moves, hosting, and kitchen experiments.
 - **Foodie Showcase**: profiles and analysis of food creators, restaurant reviewers, recipe developers, food writers, and tastemakers.

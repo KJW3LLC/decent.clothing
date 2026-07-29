@@ -6,7 +6,7 @@ permalink: /learning-paths.json
   "meta": {
     "generated": "{{ site.time | date_to_xmlschema }}",
     "version": "1.0",
-    "description": "Editorial article collections for decent.food"
+    "description": "Editorial article collections for decent.clothing"
   },
   "collections": [
     {

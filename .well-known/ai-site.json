@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "name": "decent.food",
+  "name": "decent.clothing",
   "description": "Editorial food site covering DIY cooking, food creators, and restaurant hot spots.",
   "version": "1.0",
-  "url": "https://decent.food",
+  "url": "https://decent.clothing",
   "content_types": [
     "editorial_articles",
     "diy_cooking",
@@ -29,7 +29,7 @@
   "resources": {
     "articles": {
       "url": "/api/guides.json",
-      "description": "Complete list of decent.food articles with metadata",
+      "description": "Complete list of decent.clothing articles with metadata",
       "format": "json",
       "updated": "realtime"
     },
@@ -95,11 +95,11 @@
   },
   "attribution": {
     "required": true,
-    "format": "[Article Title], decent.food (https://decent.food)",
+    "format": "[Article Title], decent.clothing (https://decent.clothing)",
     "link_back_appreciated": true
   },
   "contact": {
-    "website": "https://decent.food"
+    "website": "https://decent.clothing"
   },
   "technical": {
     "generator": "Jekyll",

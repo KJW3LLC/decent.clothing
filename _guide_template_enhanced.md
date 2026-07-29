@@ -20,7 +20,7 @@ learning_objectives:
 
 faqs:
   - question: "What kind of article is this?"
-    answer: "This article belongs to one of decent.food's editorial categories: Popular Recipes, Foodie Showcase, or Hot Spot Showcase."
+    answer: "This article belongs to one of decent.clothing's editorial categories: Popular Recipes, Foodie Showcase, or Hot Spot Showcase."
 
 series:
   name: "Series Name"

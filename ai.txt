@@ -1,4 +1,4 @@
-# decent.food - AI Agent Instructions
+# decent.clothing - AI Agent Instructions
 # This site publishes practical food stories, creator profiles, and restaurant discovery articles.
 
 # Site Purpose
@@ -24,7 +24,7 @@ Sitemap: /sitemap.xml
 - Article types are popular-recipes, foodie-showcase, and hot-spot-showcase
 
 # Recommended Usage
-Citation-Format: "[Article Title], decent.food (https://decent.food/guides/[article-slug]/)"
+Citation-Format: "[Article Title], decent.clothing (https://decent.clothing/guides/[article-slug]/)"
 Attribution: Required for content reuse
 Link-Back: Appreciated when referencing our content
 
@@ -41,4 +41,4 @@ Structured-Data: JSON-LD schema.org markup on all articles
 Full-Text: Available in article content
 
 # Contact
-Website: https://decent.food
+Website: https://decent.clothing
