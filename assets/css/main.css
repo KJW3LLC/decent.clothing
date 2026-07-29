@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,500&family=Cormorant+Garamond:ital,wght@1,500&family=DM+Serif+Display&family=Libre+Baskerville:ital@1&family=Playfair+Display:ital,wght@1,500&display=swap");
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -235,6 +237,75 @@ body {
         0 2px 3px rgba(0, 0, 0, 0.92),
         0 5px 12px rgba(0, 0, 0, 0.82),
         0 8px 24px rgba(0, 0, 0, 0.72);
+}
+
+.hero-style-word {
+    display: inline-block;
+    min-width: 2.05em;
+    color: var(--primary-color);
+    font-weight: 400;
+    text-align: center;
+    transform-origin: 50% 70%;
+}
+
+.hero-style-dm-serif {
+    font-family: "DM Serif Display", Georgia, serif;
+}
+
+.hero-style-cormorant {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.hero-style-playfair {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.hero-style-bodoni {
+    font-family: "Bodoni Moda", Didot, serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.hero-style-baskerville {
+    font-family: "Libre Baskerville", Baskerville, serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-style-word.is-changing {
+    animation: hero-style-swap 0.65s ease-in-out both;
+}
+
+@keyframes hero-style-swap {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    42% {
+        opacity: 0;
+        transform: translateY(0.12em) rotate(-2deg) scale(0.94);
+    }
+
+    58% {
+        opacity: 0;
+        transform: translateY(-0.1em) rotate(2deg) scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-style-word.is-changing {
+        animation: none;
+    }
 }
 
 @media (max-width: 640px) {

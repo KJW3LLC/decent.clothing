@@ -8,6 +8,33 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentArticleType = 'all';
     let currentSearchTerm = '';
 
+    const heroStyleWord = document.querySelector('.hero-style-word');
+    const heroStyleClasses = [
+        'hero-style-dm-serif',
+        'hero-style-cormorant',
+        'hero-style-playfair',
+        'hero-style-bodoni',
+        'hero-style-baskerville'
+    ];
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let heroStyleIndex = 0;
+
+    if (heroStyleWord && !prefersReducedMotion) {
+        window.setInterval(() => {
+            heroStyleWord.classList.add('is-changing');
+
+            window.setTimeout(() => {
+                heroStyleWord.classList.remove(heroStyleClasses[heroStyleIndex]);
+                heroStyleIndex = (heroStyleIndex + 1) % heroStyleClasses.length;
+                heroStyleWord.classList.add(heroStyleClasses[heroStyleIndex]);
+            }, 315);
+
+            window.setTimeout(() => {
+                heroStyleWord.classList.remove('is-changing');
+            }, 650);
+        }, 3200);
+    }
+
     // Filter by article type
     if (filterButtons) {
         filterButtons.forEach(button => {
