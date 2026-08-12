@@ -178,5 +178,275 @@
         "url": "https://www.flyingsolostore.com/"
       }
     ]
+  },
+  {
+    "title": "How to Build a Capsule Wardrobe Without Making It Boring",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "capsule-wardrobe", "personal-style"],
+    "sources": [
+      { "label": "Vogue capsule wardrobe guide", "url": "https://www.vogue.com/article/capsule-wardrobe" },
+      { "label": "The Good Trade capsule wardrobe guide", "url": "https://www.thegoodtrade.com/features/how-to-build-a-capsule-wardrobe/" }
+    ]
+  },
+  {
+    "title": "The Art of Layering: Building Warm Outfits Without Adding Bulk",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "layering", "cold-weather"],
+    "sources": [
+      { "label": "REI layering basics", "url": "https://www.rei.com/learn/expert-advice/layering-basics.html" },
+      { "label": "Patagonia guide to layering", "url": "https://www.patagonia.com/guides/cold-weather-layering/" }
+    ]
+  },
+  {
+    "title": "A Practical Guide to Hem Lengths for Trousers, Jeans, and Skirts",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "alterations", "fit"],
+    "sources": [
+      { "label": "Levi's tailoring services", "url": "https://www.levi.com/US/en_US/features/tailor-shop" },
+      { "label": "Permanent Style trouser length guide", "url": "https://www.permanentstyle.com/2020/08/a-guide-to-trouser-length.html" }
+    ]
+  },
+  {
+    "title": "How to Care for Leather Shoes So They Age Gracefully",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "footwear", "leather-care"],
+    "sources": [
+      { "label": "Red Wing leather care", "url": "https://www.redwingshoes.com/care-guides.html" },
+      { "label": "Dr. Martens shoe care guide", "url": "https://www.drmartens.com/us/en/guides/how-to-clean-docs" }
+    ]
+  },
+  {
+    "title": "Sneaker Care That Works: Cleaning Uppers, Soles, and Laces",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "sneakers", "clothing-care"],
+    "sources": [
+      { "label": "Nike shoe cleaning guide", "url": "https://www.nike.com/a/how-to-clean-shoes" },
+      { "label": "adidas shoe cleaning guide", "url": "https://www.adidas.com/us/blog/342920-how-to-clean-shoes" }
+    ]
+  },
+  {
+    "title": "Suit Fit Explained: Shoulders, Sleeves, Trousers, and Jacket Length",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "tailoring", "suiting"],
+    "sources": [
+      { "label": "Proper Cloth suit fit guide", "url": "https://propercloth.com/reference/how-should-a-suit-fit/" },
+      { "label": "Brooks Brothers fit guide", "url": "https://www.brooksbrothers.com/fit-guides" }
+    ]
+  },
+  {
+    "title": "Linen Without the Fuss: Wearing, Washing, and Embracing the Wrinkles",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "linen", "clothing-care"],
+    "sources": [
+      { "label": "European Flax linen care", "url": "https://allianceflaxlinenhemp.eu/en/linen/care" },
+      { "label": "LinenMe linen care guide", "url": "https://www.linenme.com/news/how-to-care-for-linen-fabric/" }
+    ]
+  },
+  {
+    "title": "How to Mix Prints Without Losing the Outfit",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "prints", "color"],
+    "sources": [
+      { "label": "Vogue pattern mixing guide", "url": "https://www.vogue.com/article/how-to-mix-prints" },
+      { "label": "Pantone Fashion Color Trend Report", "url": "https://www.pantone.com/articles/fashion-color-trend-report" }
+    ]
+  },
+  {
+    "title": "Understanding Dress Codes from Smart Casual to Black Tie",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "dress-codes", "occasion-wear"],
+    "sources": [
+      { "label": "Emily Post attire guide", "url": "https://emilypost.com/advice/attire-guide-dress-codes-from-casual-to-white-tie" },
+      { "label": "Nordstrom dress code guide", "url": "https://www.nordstrom.com/browse/content/blog/dress-code-guide" }
+    ]
+  },
+  {
+    "title": "Finding Your Best Coat Length for Proportion, Warmth, and Daily Use",
+    "article_type": "style-guides",
+    "tags": ["style-guides", "outerwear", "proportion"],
+    "sources": [
+      { "label": "REI insulated outerwear guide", "url": "https://www.rei.com/learn/expert-advice/insulated-outerwear.html" },
+      { "label": "Woolmark wool coat care", "url": "https://www.woolmark.com/care/how-to-care-for-a-wool-coat/" }
+    ]
+  },
+  {
+    "title": "Grace Wales Bonner and the Cultural Research Behind Modern Luxury",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "grace-wales-bonner", "menswear"],
+    "sources": [
+      { "label": "Wales Bonner official story", "url": "https://walesbonner.com/pages/about" },
+      { "label": "LVMH Prize profile", "url": "https://www.lvmhprize.com/designer/grace-wales-bonner" }
+    ]
+  },
+  {
+    "title": "Aurora James and the Craft-Led Vision of Brother Vellies",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "aurora-james", "accessories"],
+    "sources": [
+      { "label": "Brother Vellies story", "url": "https://brothervellies.com/pages/about" },
+      { "label": "CFDA member profile for Aurora James", "url": "https://cfda.com/members/profile/aurora-james" }
+    ]
+  },
+  {
+    "title": "Telfar Clemens and the Shopping Bag That Reframed Accessible Luxury",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "telfar-clemens", "accessories"],
+    "sources": [
+      { "label": "Telfar official site", "url": "https://telfar.net/" },
+      { "label": "CFDA profile of Telfar Clemens", "url": "https://cfda.com/members/profile/telfar-clemens" }
+    ]
+  },
+  {
+    "title": "Thom Browne and the Uniform as a Platform for Experiment",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "thom-browne", "tailoring"],
+    "sources": [
+      { "label": "Thom Browne official story", "url": "https://www.thombrowne.com/us/about" },
+      { "label": "CFDA profile of Thom Browne", "url": "https://cfda.com/members/profile/thom-browne" }
+    ]
+  },
+  {
+    "title": "Emily Adams Bode Aujla and the Storytelling Power of Antique Textiles",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "bode", "textiles"],
+    "sources": [
+      { "label": "Bode official story", "url": "https://bode.com/pages/about" },
+      { "label": "CFDA profile of Emily Adams Bode Aujla", "url": "https://cfda.com/members/profile/emily-adams-bode" }
+    ]
+  },
+  {
+    "title": "Kerby Jean-Raymond and the Community-Centered World of Pyer Moss",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "kerby-jean-raymond", "pyer-moss"],
+    "sources": [
+      { "label": "Pyer Moss official site", "url": "https://pyermoss.com/" },
+      { "label": "CFDA profile of Kerby Jean-Raymond", "url": "https://cfda.com/members/profile/kerby-jean-raymond" }
+    ]
+  },
+  {
+    "title": "Gabriela Hearst and the Pursuit of Lower-Impact Luxury",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "gabriela-hearst", "responsible-fashion"],
+    "sources": [
+      { "label": "Gabriela Hearst sustainability", "url": "https://gabrielahearst.com/pages/sustainability" },
+      { "label": "CFDA profile of Gabriela Hearst", "url": "https://cfda.com/members/profile/gabriela-hearst" }
+    ]
+  },
+  {
+    "title": "Marine Serre and the Upcycled Language of Futurewear",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "marine-serre", "upcycling"],
+    "sources": [
+      { "label": "Marine Serre official story", "url": "https://www.marineserre.com/en-us/about" },
+      { "label": "LVMH Prize profile", "url": "https://www.lvmhprize.com/designer/marine-serre" }
+    ]
+  },
+  {
+    "title": "Martine Rose and the Off-Kilter Proportions Reshaping Menswear",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "martine-rose", "menswear"],
+    "sources": [
+      { "label": "Martine Rose official site", "url": "https://martine-rose.com/" },
+      { "label": "British Fashion Council designer profile", "url": "https://www.britishfashioncouncil.co.uk/designer/martine-rose" }
+    ]
+  },
+  {
+    "title": "Thebe Magugu and the South African Narratives Woven Into Fashion",
+    "article_type": "designer-spotlight",
+    "tags": ["designer-spotlight", "thebe-magugu", "south-africa"],
+    "sources": [
+      { "label": "Thebe Magugu official story", "url": "https://www.thebemagugu.com/pages/about" },
+      { "label": "LVMH Prize profile", "url": "https://www.lvmhprize.com/designer/thebe-magugu" }
+    ]
+  },
+  {
+    "title": "SSENSE and the Editorial Approach to Global Luxury Retail",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "ssense", "online-retail"],
+    "sources": [
+      { "label": "SSENSE company profile", "url": "https://people.ssense.com/en/about" },
+      { "label": "SSENSE official site", "url": "https://www.ssense.com/" }
+    ]
+  },
+  {
+    "title": "END. Clothing and the Growth of Sneaker Retail Beyond the Drop",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "end-clothing", "sneakers"],
+    "sources": [
+      { "label": "END. Clothing official site", "url": "https://www.endclothing.com/" },
+      { "label": "END. store locations", "url": "https://www.endclothing.com/stores" }
+    ]
+  },
+  {
+    "title": "The Webster and the Destination Boutique Built Around Color",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "the-webster", "luxury-retail"],
+    "sources": [
+      { "label": "The Webster official story", "url": "https://thewebster.com/about-us" },
+      { "label": "The Webster store locations", "url": "https://thewebster.com/locations" }
+    ]
+  },
+  {
+    "title": "LN-CC and the Experimental Store Designed Like an Archive",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "ln-cc", "london"],
+    "sources": [
+      { "label": "LN-CC official site", "url": "https://www.ln-cc.com/" },
+      { "label": "LN-CC London store", "url": "https://www.ln-cc.com/en-us/visit-us" }
+    ]
+  },
+  {
+    "title": "10 Corso Como and the Store That Blended Fashion, Art, and Publishing",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "10-corso-como", "milan"],
+    "sources": [
+      { "label": "10 Corso Como official story", "url": "https://10corsocomo.com/pages/about-us" },
+      { "label": "10 Corso Como official site", "url": "https://10corsocomo.com/" }
+    ]
+  },
+  {
+    "title": "Goodhood and the Independent Retail Mix Connecting Clothes, Objects, and Culture",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "goodhood", "independent-retail"],
+    "sources": [
+      { "label": "Goodhood official story", "url": "https://goodhoodstore.com/pages/about-us" },
+      { "label": "Goodhood official site", "url": "https://goodhoodstore.com/" }
+    ]
+  },
+  {
+    "title": "Garmentory and the Online Marketplace Centering Independent Boutiques",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "garmentory", "independent-designers"],
+    "sources": [
+      { "label": "Garmentory official story", "url": "https://www.garmentory.com/about" },
+      { "label": "Garmentory boutiques", "url": "https://www.garmentory.com/boutiques" }
+    ]
+  },
+  {
+    "title": "Mohawk General Store and the Art of the Carefully Edited Wardrobe",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "mohawk-general-store", "los-angeles"],
+    "sources": [
+      { "label": "Mohawk General Store official story", "url": "https://www.mohawkgeneralstore.com/pages/about" },
+      { "label": "Mohawk General Store official site", "url": "https://www.mohawkgeneralstore.com/" }
+    ]
+  },
+  {
+    "title": "Canoe Club and the Community-Building Side of Menswear Retail",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "canoe-club", "menswear"],
+    "sources": [
+      { "label": "Canoe Club official story", "url": "https://shopcanoeclub.com/pages/about-us" },
+      { "label": "Canoe Club official site", "url": "https://shopcanoeclub.com/" }
+    ]
+  },
+  {
+    "title": "Kirna Zabete and the Staying Power of a Multibrand Boutique",
+    "article_type": "shop-spotlight",
+    "tags": ["shop-spotlight", "kirna-zabete", "luxury-retail"],
+    "sources": [
+      { "label": "Kirna Zabete official story", "url": "https://kirnazabete.com/pages/about-us" },
+      { "label": "Kirna Zabete store locations", "url": "https://kirnazabete.com/pages/stores" }
+    ]
   }
 ]

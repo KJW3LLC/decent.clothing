@@ -36,24 +36,33 @@ jobs:
         run: npm run validate
 
       - name: Generate new article
+        id: generate
         env:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
         run: npm run generate
 
       - name: Fix formatting inconsistencies
+        if: steps.generate.outputs.exhausted != 'true'
         run: |
           npm run fix-formatting
           node scripts/fix-horizontal-rules.js
 
       - name: Retry missing guide images
+        if: steps.generate.outputs.exhausted != 'true'
         env:
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
         run: node scripts/add-images-retroactive.js
 
       - name: Check for changes
+        if: steps.generate.outputs.exhausted != 'true'
         id: git-check
         run: |
-          git diff --exit-code _guides/ generated-topics.json assets/images/guides/ || echo "changes=true" >> $GITHUB_OUTPUT
+          git add _guides/ generated-topics.json assets/images/guides/
+          if git diff --cached --quiet; then
+            echo "::error::Generator completed without producing a committable article"
+            exit 1
+          fi
+          echo "changes=true" >> "$GITHUB_OUTPUT"
 
       - name: Validate series navigation (informational)
         if: steps.git-check.outputs.changes == 'true'

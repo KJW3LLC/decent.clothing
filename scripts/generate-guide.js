@@ -208,9 +208,8 @@ function selectNextTopic(topics, generatedTopics) {
   );
 
   if (unusedTopics.length === 0) {
-    // All topics used, reset and start over
-    console.log('All topics have been used. Resetting...');
-    return topics[Math.floor(Math.random() * topics.length)];
+    console.log('All topics have been generated. Generation is paused until new topics are added.');
+    return null;
   }
 
   // Convert generated topics to slug format for matching
@@ -1129,6 +1128,18 @@ async function main() {
 
     // Select topic
     const topic = selectNextTopic(topics, generatedTopics);
+    if (!topic) {
+      if (process.env.GITHUB_OUTPUT) {
+        fs.appendFileSync(process.env.GITHUB_OUTPUT, 'exhausted=true\n');
+      }
+      if (process.env.GITHUB_STEP_SUMMARY) {
+        fs.appendFileSync(
+          process.env.GITHUB_STEP_SUMMARY,
+          '## Clothing article generation paused\n\nAll configured topics have already been generated. Add new unique topics to `topics.json` to resume generation.\n'
+        );
+      }
+      return;
+    }
     console.log(`Selected topic: ${topic.title} (${getArticleTypeLabel(topic.article_type)})`);
 
     // Generate content
