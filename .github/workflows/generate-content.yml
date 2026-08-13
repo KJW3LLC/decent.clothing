@@ -57,11 +57,21 @@ jobs:
         if: steps.generate.outputs.exhausted != 'true'
         id: git-check
         run: |
-          git add _guides/ generated-topics.json assets/images/guides/
+          # Stage first so new, previously untracked guide/image files are included.
+          git add --all -- _guides/ generated-topics.json assets/images/guides/
           if git diff --cached --quiet; then
             echo "::error::Generator completed without producing a committable article"
             exit 1
           fi
+
+          new_guides="$(git diff --cached --name-only --diff-filter=A -- '_guides/*.md')"
+          if [ -z "$new_guides" ]; then
+            echo "::error::Generator changed files but did not create a new guide"
+            exit 1
+          fi
+
+          echo "New guide(s):"
+          echo "$new_guides"
           echo "changes=true" >> "$GITHUB_OUTPUT"
 
       - name: Validate series navigation (informational)

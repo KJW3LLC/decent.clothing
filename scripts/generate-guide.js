@@ -40,6 +40,29 @@ function titleToSlug(title) {
     .replace(/^-|-$/g, '');
 }
 
+function loadPublishedGuideTitles() {
+  if (!fs.existsSync(GUIDES_DIR)) return [];
+
+  return fs.readdirSync(GUIDES_DIR)
+    .filter(file => file.endsWith('.md'))
+    .map(file => {
+      const content = fs.readFileSync(path.join(GUIDES_DIR, file), 'utf-8');
+      const match = content.match(/^title:\s*["']?(.+?)["']?\s*$/m);
+      return match ? match[1].trim() : null;
+    })
+    .filter(Boolean);
+}
+
+function assertGuideIsUnique(topic) {
+  const topicSlug = titleToSlug(topic.title);
+  const publishedTitles = loadPublishedGuideTitles();
+  const publishedSlugs = new Set(publishedTitles.map(titleToSlug));
+
+  if (publishedTitles.includes(topic.title) || publishedSlugs.has(topicSlug)) {
+    throw new Error(`Refusing to generate duplicate guide title or slug: ${topic.title}`);
+  }
+}
+
 const ARTICLE_TYPES = {
   'style-guides': 'Style Guides',
   'designer-spotlight': 'Designer Spotlight',
@@ -891,6 +914,8 @@ async function fetchAndSaveImage(topic) {
 
 // Create guide file
 async function createGuideFile(topic, content, imageData) {
+  assertGuideIsUnique(topic);
+
   const filename = createFilename(topic.title);
   const filepath = path.join(GUIDES_DIR, filename);
 
@@ -1124,10 +1149,15 @@ async function main() {
 
     // Load topics
     const { topics, generatedTopics } = loadTopics();
-    console.log(`Loaded ${topics.length} topics, ${generatedTopics.length} already generated`);
+    const publishedTitles = loadPublishedGuideTitles();
+    const usedTitles = [...new Set([...generatedTopics, ...publishedTitles])];
+    console.log(
+      `Loaded ${topics.length} topics, ${generatedTopics.length} tracked as generated, ` +
+      `${publishedTitles.length} published guides`
+    );
 
     // Select topic
-    const topic = selectNextTopic(topics, generatedTopics);
+    const topic = selectNextTopic(topics, usedTitles);
     if (!topic) {
       if (process.env.GITHUB_OUTPUT) {
         fs.appendFileSync(process.env.GITHUB_OUTPUT, 'exhausted=true\n');
